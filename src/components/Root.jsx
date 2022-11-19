@@ -8,8 +8,8 @@ export const ProductContext = createContext([]);
 export const CartContext = createContext([]);
 
 const Root = () => {
-  const [cart, setCart] = useState([]);
-  const products = useLoaderData();
+  const { products, initialCart } = useLoaderData();
+  const [cart, setCart] = useState(initialCart);
   return (
     <ProductContext.Provider value={products}>
       <CartContext.Provider value={[cart, setCart]}>
