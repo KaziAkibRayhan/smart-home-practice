@@ -1,11 +1,8 @@
-import React from 'react'
-
+import React from "react";
+import { RouterProvider } from "react-router-dom";
+import router from "./utils/routes";
 function App() {
-  return (
-    <div className='flex min-h-screen justify-center items-center'>
-      <h1 className='text-5xl'>Welcome to Smart Home Starter Template</h1>
-    </div>
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
